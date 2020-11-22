@@ -5,6 +5,8 @@ import './Tab1.css';
 
 const Tab1: React.FC = () => {
 
+  const hello = "Hello";
+  
   return (
     <IonPage>
       <IonHeader>
