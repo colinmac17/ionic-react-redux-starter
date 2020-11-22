@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@capacitor/core": "2.4.3",
+    "@capacitor/ios": "^2.4.3",
     "@ionic/react": "^5.0.7",
     "@ionic/react-router": "^5.0.7",
     "@testing-library/jest-dom": "^4.2.4",
@@ -29,16 +30,12 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prettier-format": "prettier 'src/**/*.ts*' --write",
-    "lint": "eslint . --ext .ts",
     "postinstall": "husky install"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run prettier-format && npm run lint"
+      "pre-commit": "npm run prettier-format"
     }
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [
@@ -54,10 +51,6 @@
   },
   "devDependencies": {
     "@capacitor/cli": "2.4.3",
-    "@typescript-eslint/eslint-plugin": "^4.8.1",
-    "@typescript-eslint/parser": "^4.8.1",
-    "eslint": "^7.14.0",
-    "eslint-plugin-react": "^7.21.5",
     "husky": "^5.0.4",
     "prettier": "2.2.0"
   },
