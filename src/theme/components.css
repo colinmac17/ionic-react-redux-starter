@@ -1,0 +1,8 @@
+/**
+    Add any global component or element styles
+    Can use var() to use variables
+ */
+
+.link {
+    color: var(--ion-color-secondary);
+}

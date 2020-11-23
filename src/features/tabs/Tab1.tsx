@@ -5,27 +5,30 @@ import {
   IonPage,
   IonTitle,
   IonToolbar,
+  IonButton
 } from "@ionic/react";
+import {selectTabOneTitle} from "./tabSlice";
 import ExploreContainer from "../../components/ExploreContainer";
 import "./Tab1.css";
+import {useSelector} from "react-redux";
 
 const Tab1: React.FC = () => {
-  const hello = "Hello World!";
+  const title = useSelector(selectTabOneTitle);
 
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 1</IonTitle>
+          <IonTitle>{title}</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">{hello}</IonTitle>
+            <IonTitle size="large">{title}</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 1 page" />
+        <ExploreContainer name={title} />
       </IonContent>
     </IonPage>
   );

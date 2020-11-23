@@ -25,11 +25,13 @@ export const tabSlice = createSlice({
 });
 
 //Thunks
-export const changeTabOneTitleAsync = (title: string) => (
+export const changeTabTitleAsync = (title: string) => (
   dispatch: (arg0: { payload: any; type: string }) => void
 ) => {
   setTimeout(() => {
     dispatch(changeTabOneTitle(title));
+    dispatch(changeTabTwoTitle(title));
+    dispatch(changeTabThreeTitle(title));
   }, 1000);
 };
 
@@ -41,11 +43,11 @@ export const {
 } = tabSlice.actions;
 
 //Selector functions
-export const selectTabOneTitle = (state: { tabOneTitle: any }) =>
-  state.tabOneTitle;
-export const selectTabTwoTitle = (state: { tabTwoTitle: any }) =>
-  state.tabTwoTitle;
-export const selectTabThreeTitle = (state: { tabThreeTitle: any }) =>
-  state.tabThreeTitle;
+export const selectTabOneTitle = (state: { tabs: { tabOneTitle: any; }; }) =>
+  state.tabs.tabOneTitle;
+export const selectTabTwoTitle = (state: { tabs: { tabTwoTitle: any; }; }) =>
+  state.tabs.tabTwoTitle;
+export const selectTabThreeTitle = (state: { tabs: { tabThreeTitle: any; }; }) =>
+  state.tabs.tabThreeTitle;
 
 export default tabSlice.reducer;
