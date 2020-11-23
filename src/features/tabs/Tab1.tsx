@@ -5,12 +5,12 @@ import {
   IonPage,
   IonTitle,
   IonToolbar,
-  IonButton
+  IonButton,
 } from "@ionic/react";
-import {selectTabOneTitle} from "./tabSlice";
+import { selectTabOneTitle } from "./tabSlice";
 import ExploreContainer from "../../components/ExploreContainer";
 import "./Tab1.css";
-import {useSelector} from "react-redux";
+import { useSelector } from "react-redux";
 
 const Tab1: React.FC = () => {
   const title = useSelector(selectTabOneTitle);

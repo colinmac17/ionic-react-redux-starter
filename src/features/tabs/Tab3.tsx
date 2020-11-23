@@ -8,11 +8,10 @@ import {
 } from "@ionic/react";
 import ExploreContainer from "../../components/ExploreContainer";
 import "./Tab3.css";
-import {useSelector} from "react-redux";
-import {selectTabTwoTitle} from "./tabSlice";
+import { useSelector } from "react-redux";
+import { selectTabTwoTitle } from "./tabSlice";
 
 const Tab3: React.FC = () => {
-
   const title = useSelector(selectTabTwoTitle);
 
   return (

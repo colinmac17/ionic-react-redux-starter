@@ -43,11 +43,11 @@ export const {
 } = tabSlice.actions;
 
 //Selector functions
-export const selectTabOneTitle = (state: { tabs: { tabOneTitle: any; }; }) =>
+export const selectTabOneTitle = (state: { tabs: { tabOneTitle: any } }) =>
   state.tabs.tabOneTitle;
-export const selectTabTwoTitle = (state: { tabs: { tabTwoTitle: any; }; }) =>
+export const selectTabTwoTitle = (state: { tabs: { tabTwoTitle: any } }) =>
   state.tabs.tabTwoTitle;
-export const selectTabThreeTitle = (state: { tabs: { tabThreeTitle: any; }; }) =>
+export const selectTabThreeTitle = (state: { tabs: { tabThreeTitle: any } }) =>
   state.tabs.tabThreeTitle;
 
 export default tabSlice.reducer;
