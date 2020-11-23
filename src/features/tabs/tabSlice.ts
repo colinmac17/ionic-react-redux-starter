@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export const tabSlice = createSlice({
-  name: 'tabs',
+  name: "tabs",
   initialState: {
     tabOneTitle: "Tab 1",
     tabTwoTitle: "Tab 2",
@@ -21,22 +21,31 @@ export const tabSlice = createSlice({
     changeTabThreeTitle: (state, action) => {
       state.tabThreeTitle = action.payload;
     },
-  }
+  },
 });
 
 //Thunks
-export const changeTabOneTitleAsync = (title: string) => (dispatch: (arg0: { payload: any; type: string; }) => void) => {
+export const changeTabOneTitleAsync = (title: string) => (
+  dispatch: (arg0: { payload: any; type: string }) => void
+) => {
   setTimeout(() => {
-    dispatch(changeTabOneTitle(title))
+    dispatch(changeTabOneTitle(title));
   }, 1000);
-}
+};
 
 //Action creators
-export const { changeTabOneTitle, changeTabTwoTitle, changeTabThreeTitle } = tabSlice.actions;
+export const {
+  changeTabOneTitle,
+  changeTabTwoTitle,
+  changeTabThreeTitle,
+} = tabSlice.actions;
 
 //Selector functions
-export const selectTabOneTitle = (state: { tabOneTitle: any; }) => state.tabOneTitle;
-export const selectTabTwoTitle = (state: { tabTwoTitle: any; }) => state.tabTwoTitle;
-export const selectTabThreeTitle = (state: { tabThreeTitle: any; }) => state.tabThreeTitle;
+export const selectTabOneTitle = (state: { tabOneTitle: any }) =>
+  state.tabOneTitle;
+export const selectTabTwoTitle = (state: { tabTwoTitle: any }) =>
+  state.tabTwoTitle;
+export const selectTabThreeTitle = (state: { tabThreeTitle: any }) =>
+  state.tabThreeTitle;
 
 export default tabSlice.reducer;

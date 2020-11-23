@@ -3,6 +3,6 @@ import tabReducer from "../features/tabs/tabSlice";
 
 export default configureStore({
   reducer: {
-    tabs: tabReducer
-  }
-})
+    tabs: tabReducer,
+  },
+});
